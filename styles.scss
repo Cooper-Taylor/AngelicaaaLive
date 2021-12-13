@@ -1,0 +1,99 @@
+
+/* defining font */
+
+$mainblue: #129ada;
+$darkblue: #076fa0c5;
+
+/*Creating a class so I can adjust picture locations*/
+
+@font-face {
+    font-family: MainFont;
+    src: url("Libre_Baskerville/LibreBaskerville-Regular.ttf");
+}
+
+@keyframes FadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+body{
+
+    background-image: url("images/Angelicaaabackground.small.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+
+    font-size: 2.5vw;
+    font-family: MainFont, sans-serif;
+    text-align: center;
+    line-height: 1.5;
+    word-spacing: 2px;
+
+}
+
+@keyframes colorchange{
+    from{background-color: $mainblue}
+    to{background-color: $darkblue}
+}
+
+#Header{
+    background: $mainblue;
+    width: 100%;
+
+    .animation:hover{
+        background: $mainblue;
+        animation: colorchange .4s;
+        transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        background-color: $darkblue;
+    }
+
+    font-weight: bold;
+    color: white;
+    border-bottom: 5px $darkblue;
+
+    #Title{
+        padding-top: 10px;
+    }
+
+    margin-bottom: 16%;
+
+    .row{
+        width: 100%;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    img{
+        float: right;
+        position: absolute;
+        top: 1%;
+        right: 2.5%;
+    }
+
+}
+
+.row{
+    margin-right:0;
+    margin-left:0;
+}
+
+#AboutMe{
+    opacity: 0;
+    animation: FadeIn 75ms;
+    opacity: 1;
+    #AboutMeImage{
+        padding-right: 4.185%; 
+        margin-bottom: 3%;
+    }
+}

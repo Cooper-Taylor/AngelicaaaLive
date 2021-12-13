@@ -1,0 +1,73 @@
+/* defining font */
+@font-face {
+  font-family: MainFont;
+  src: url("Libre_Baskerville/LibreBaskerville-Regular.ttf");
+}
+@keyframes screenloading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  background-image: url("images/Angelicaaabackground.small.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-size: 2.5vw;
+  font-family: MainFont, sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  word-spacing: 2px;
+}
+
+@keyframes colorchange {
+  from {
+    background-color: #129ada;
+  }
+  to {
+    background-color: #076fa0c5;
+  }
+}
+#Header {
+  background: #129ada;
+  width: 100%;
+  font-weight: bold;
+  color: white;
+  border-bottom: 5px #076fa0c5;
+  margin-bottom: 16%;
+}
+#Header .animation:hover {
+  background: #129ada;
+  animation: colorchange 0.4s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: #076fa0c5;
+}
+#Header #Title {
+  padding-top: 10px;
+}
+#Header .row {
+  width: 100%;
+}
+#Header .row a {
+  text-decoration: none;
+  color: white;
+}
+#Header img {
+  float: right;
+  position: absolute;
+  top: 1%;
+  right: 2.5%;
+}
+
+#AboutMe {
+  animation: screenloading 4s;
+}
+
+/*# sourceMappingURL=styles.css.map */
